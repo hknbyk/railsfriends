@@ -1,6 +1,9 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="card">
+  <div class="card-header">
+    <h4>Log in</h4>
+  </div>
+  <div class="card-body">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field form-group">
     <br />
     <%= f.email_field :email, 
@@ -25,10 +28,15 @@
       <%= f.label :remember_me %>
     </div>
   <% end %>
+  <br/>
 
   <div class="actions form-group">
     <%= f.submit "Log in", class:'btn btn-secondary' %>
   </div>
 <% end %>
+  </div>
+</div>
 
 <%= render "devise/shared/links" %>
+
+
